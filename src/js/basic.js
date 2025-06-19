@@ -1,9 +1,11 @@
-export default function healthColor(health) {
+export default function healthColor(health)  {
   if (health.health > 50) {
-    return "healthy";
+    return 'healthy';
   }
-  if (health.health <= 50) {
-    return "wounded";
+
+  if (health.health < 15) {
+    return 'critical';
   }
-  return "critical";
+
+  return 'wounded';
 }
